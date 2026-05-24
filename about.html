@@ -244,13 +244,22 @@ footer {
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
 }
 
-[data-l] { display: none; }
-html[data-current-lang="ru"] [data-l="ru"],
-html[data-current-lang="en"] [data-l="en"],
-html[data-current-lang="tm"] [data-l="tm"] { display: revert; }
+[data-l] { display: none !important; }
 html[data-current-lang="ru"] span[data-l="ru"],
 html[data-current-lang="en"] span[data-l="en"],
-html[data-current-lang="tm"] span[data-l="tm"] { display: inline; }
+html[data-current-lang="tm"] span[data-l="tm"] { display: inline !important; }
+html[data-current-lang="ru"] div[data-l="ru"],
+html[data-current-lang="en"] div[data-l="en"],
+html[data-current-lang="tm"] div[data-l="tm"] { display: flex !important; }
+html[data-current-lang="ru"] p[data-l="ru"],
+html[data-current-lang="en"] p[data-l="en"],
+html[data-current-lang="tm"] p[data-l="tm"] { display: block !important; }
+html[data-current-lang="ru"] ul[data-l="ru"],
+html[data-current-lang="en"] ul[data-l="en"],
+html[data-current-lang="tm"] ul[data-l="tm"] { display: block !important; }
+html[data-current-lang="ru"] li[data-l="ru"],
+html[data-current-lang="en"] li[data-l="en"],
+html[data-current-lang="tm"] li[data-l="tm"] { display: list-item !important; }
 
 .page-hero {
   padding: 140px 48px 80px;
@@ -431,9 +440,9 @@ html[data-current-lang="tm"] span[data-l="tm"] { display: inline; }
       <span data-l="tm">Çynlakaý işewürlik üçin <span class="accent">ygtybarly hyzmatdaş</span></span>
     </h1>
     <p class="lead">
-      <span data-l="ru">Ygtybarly Ulag — компания по аренде транспорта и специализированной техники, основанная в 2022 году в Ашхабаде. Часть Owadan Ülke Group.</span>
-      <span data-l="en">Ygtybarly Ulag is a transport and specialized equipment rental company founded in 2022 in Ashgabat. Part of Owadan Ülke Group.</span>
-      <span data-l="tm">Ygtybarly Ulag — 2022-nji ýylda Aşgabatda esaslandyrylan ulag we ýörite tehnika kärendesi boýunça kompaniýa. Owadan Ülke Toparynyň bir bölegi.</span>
+      <span data-l="ru">Ygtybarly Ulag — компания по аренде транспорта и специализированной техники, основанная в 2022 году в Ашхабаде.</span>
+      <span data-l="en">Ygtybarly Ulag is a transport and specialized equipment rental company founded in 2022 in Ashgabat.</span>
+      <span data-l="tm">Ygtybarly Ulag — 2022-nji ýylda Aşgabatda esaslandyrylan ulag we ýörite tehnika kärendesi boýunça kompaniýa.</span>
     </p>
   </div>
 </section>
@@ -461,7 +470,6 @@ html[data-current-lang="tm"] span[data-l="tm"] { display: inline; }
       <h3><span data-l="ru">Ключевая информация</span><span data-l="en">Key facts</span><span data-l="tm">Esasy maglumat</span></h3>
       <div class="fact-row"><div class="fact-label"><span data-l="ru">Основана</span><span data-l="en">Founded</span><span data-l="tm">Esaslandyryldy</span></div><div class="fact-value">2022</div></div>
       <div class="fact-row"><div class="fact-label"><span data-l="ru">Штаб-квартира</span><span data-l="en">Headquarters</span><span data-l="tm">Baş ofis</span></div><div class="fact-value">Ashgabat</div></div>
-      <div class="fact-row"><div class="fact-label"><span data-l="ru">Группа</span><span data-l="en">Group</span><span data-l="tm">Topar</span></div><div class="fact-value">Owadan Ülke</div></div>
       <div class="fact-row"><div class="fact-label"><span data-l="ru">Контракт</span><span data-l="en">Key Contract</span><span data-l="tm">Şertnama</span></div><div class="fact-value">Sinopec 7Y</div></div>
       <div class="fact-row"><div class="fact-label"><span data-l="ru">Автопарк</span><span data-l="en">Fleet Size</span><span data-l="tm">Awtopark</span></div><div class="fact-value">100+</div></div>
     </div>
@@ -477,121 +485,7 @@ html[data-current-lang="tm"] span[data-l="tm"] { display: inline; }
   </p>
 </section>
 
-<section class="group" id="group">
-  <div class="group-inner">
-    <div class="group-head">
-      <div class="eyebrow"><span data-l="ru">Группа компаний</span><span data-l="en">Group of companies</span><span data-l="tm">Kompaniýalar topary</span></div>
-      <h2 class="title-lg">Owadan Ülke <span class="accent">Group</span></h2>
-      <p class="body-lead">
-        <span data-l="ru">Один из наиболее влиятельных частных холдингов Туркменистана, основанный в 2016 году и работающий в четырёх ключевых отраслях.</span>
-        <span data-l="en">One of Turkmenistan's most influential private holdings, founded in 2016 and operating across four key industries.</span>
-        <span data-l="tm">2016-njy ýylda esaslandyrylan we dört esasy pudakda işleýän Türkmenistanyň iň täsirli hususy holdinglerinden biri.</span>
-      </p>
-    </div>
-    <div class="group-grid">
-      <div class="group-cell">
-        <div class="group-num">— 01</div>
-        <div class="group-name">Owadan Ülke</div>
-        <div class="group-industry"><span data-l="ru">Пищевая отрасль</span><span data-l="en">Food Industry</span><span data-l="tm">Azyk senagaty</span></div>
-        <p class="group-text">
-          <span data-l="ru">Один из крупнейших производителей продуктов питания. Бренды NUR, Mylayym, Hazyna, Esmo.</span>
-          <span data-l="en">One of the largest food producers. Brands NUR, Mylayym, Hazyna, Esmo.</span>
-          <span data-l="tm">Iň uly azyk önümçilik kärhanalaryndan biri. NUR, Mylayym, Hazyna, Esmo markalary.</span>
-        </p>
-      </div>
-      <div class="group-cell">
-        <div class="group-num">— 02</div>
-        <div class="group-name">Hazyna Gurlushyk</div>
-        <div class="group-industry"><span data-l="ru">Строительство</span><span data-l="en">Construction</span><span data-l="tm">Gurluşyk</span></div>
-        <p class="group-text">
-          <span data-l="ru">Более 10 лет опыта в инфраструктурных проектах. Подстанции, водоснабжение, гособъекты.</span>
-          <span data-l="en">Over 10 years in infrastructure. Substations, water supply, government facilities.</span>
-          <span data-l="tm">Infrastruktura işlerinde 10 ýyldan gowrak tejribe. Bekedler, suw, döwlet desgalary.</span>
-        </p>
-      </div>
-      <div class="group-cell current">
-        <div class="group-num">— 03</div>
-        <div class="group-name">Ygtybarly Ulag</div>
-        <div class="group-industry"><span data-l="ru">Транспорт и логистика</span><span data-l="en">Transport & Logistics</span><span data-l="tm">Ulag we logistika</span></div>
-        <p class="group-text">
-          <span data-l="ru">Долгосрочная аренда коммерческого и специализированного транспорта. Контракт с Sinopec.</span>
-          <span data-l="en">Long-term lease of commercial and specialized vehicles. Sinopec contract.</span>
-          <span data-l="tm">Söwda we ýörite ulaglaryň uzak möhletli kärendesi. Sinopec şertnamasy.</span>
-        </p>
-      </div>
-      <div class="group-cell">
-        <div class="group-num">— 04</div>
-        <div class="group-name">Goňur Bars</div>
-        <div class="group-industry"><span data-l="ru">Нефть и газ</span><span data-l="en">Oil & Gas</span><span data-l="tm">Nebit we gaz</span></div>
-        <p class="group-text">
-          <span data-l="ru">Логистика нефтегазовой отрасли. Поставки промышленного сырья и нефтехимических продуктов.</span>
-          <span data-l="en">Oil and gas logistics. Industrial raw materials and petrochemical products supply.</span>
-          <span data-l="tm">Nebit-gaz logistikasy. Senagat çig mallary we nebithimiýa önümleri üpjünçiligi.</span>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="timeline-section">
-  <div class="timeline-section-inner">
-    <div class="timeline-head">
-      <div class="eyebrow"><span data-l="ru">История</span><span data-l="en">History</span><span data-l="tm">Taryh</span></div>
-      <h2 class="title-lg">
-        <span data-l="ru">Путь <span class="accent">группы</span></span>
-        <span data-l="en">The <span class="accent">group's</span> journey</span>
-        <span data-l="tm">Toparyň <span class="accent">ýoly</span></span>
-      </h2>
-    </div>
-    <div class="timeline-list">
-      <div class="timeline-item">
-        <div class="timeline-year">2015</div>
-        <h3 class="timeline-title"><span data-l="ru">Старт инфраструктурных проектов</span><span data-l="en">Infrastructure projects begin</span><span data-l="tm">Infrastruktura taslamalary başlaýar</span></h3>
-        <p class="timeline-text">
-          <span data-l="ru">Hazyna Gurlushyk становится официальным поставщиком JCB и начинает государственные инфраструктурные проекты.</span>
-          <span data-l="en">Hazyna Gurlushyk becomes the official JCB supplier and begins state infrastructure projects.</span>
-          <span data-l="tm">Hazyna Gurlushyk resmi JCB üpjünçisi bolýar we döwlet infrastruktura taslamalaryny başlaýar.</span>
-        </p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2016</div>
-        <h3 class="timeline-title"><span data-l="ru">Запуск Owadan Ülke Food</span><span data-l="en">Owadan Ülke Food launch</span><span data-l="tm">Owadan Ülke Food başlanýar</span></h3>
-        <p class="timeline-text">
-          <span data-l="ru">Открытие производства в Ак-Бугдай. Бренд NUR быстро становится одним из самых узнаваемых.</span>
-          <span data-l="en">Production launch in Ak-Bugday. NUR brand quickly becomes one of the most recognized.</span>
-          <span data-l="tm">Ak-Bugdaýda önümçilik açylýar. NUR markasy iň meşhur markalardan birine öwrülýär.</span>
-        </p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2020</div>
-        <h3 class="timeline-title"><span data-l="ru">Государственный проект</span><span data-l="en">Government project</span><span data-l="tm">Döwlet taslamasy</span></h3>
-        <p class="timeline-text">
-          <span data-l="ru">Сдача под ключ объекта Национального Комитета по кибербезопасности.</span>
-          <span data-l="en">Turnkey delivery of the National Cybersecurity Committee facility.</span>
-          <span data-l="tm">Milli Kiberhowpsuzlyk Komiteti desgasynyň açar gowşurylyşy.</span>
-        </p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2022</div>
-        <h3 class="timeline-title"><span data-l="ru">Основание Ygtybarly Ulag</span><span data-l="en">Ygtybarly Ulag founded</span><span data-l="tm">Ygtybarly Ulag esaslandyryldy</span></h3>
-        <p class="timeline-text">
-          <span data-l="ru">Сразу после основания подписан 7-летний контракт с Sinopec на 100+ единиц техники.</span>
-          <span data-l="en">Immediately after founding, a 7-year contract with Sinopec for 100+ vehicles is signed.</span>
-          <span data-l="tm">Esaslandyrylanyndan soň Sinopec bilen 100+ ulag üçin 7 ýyllyk şertnama baglaşyldy.</span>
-        </p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2023</div>
-        <h3 class="timeline-title"><span data-l="ru">Запуск Goňur Bars</span><span data-l="en">Goňur Bars launch</span><span data-l="tm">Goňur Bars başlanýar</span></h3>
-        <p class="timeline-text">
-          <span data-l="ru">Расширение в нефтегазовый сектор. Поставки промышленного сырья по всей стране.</span>
-          <span data-l="en">Expansion into oil and gas. Industrial raw material supply nationwide.</span>
-          <span data-l="tm">Nebit-gaz pudagyna giňelmek. Ýurt boýunça senagat çig mallary üpjünçiligi.</span>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 
 </main>
 
@@ -604,7 +498,6 @@ html[data-current-lang="tm"] span[data-l="tm"] { display: inline; }
     <div class="footer-col">
       <h4><span data-l="ru">О компании</span><span data-l="en">About</span><span data-l="tm">Biz hakda</span></h4>
       <a href="about.html"><span data-l="ru">О нас</span><span data-l="en">About us</span><span data-l="tm">Biz hakda</span></a>
-      <a href="about.html#group">Owadan Ülke Group</a>
     </div>
     <div class="footer-col">
       <h4><span data-l="ru">Услуги</span><span data-l="en">Services</span><span data-l="tm">Hyzmatlar</span></h4>
@@ -619,7 +512,7 @@ html[data-current-lang="tm"] span[data-l="tm"] { display: inline; }
     </div>
   </div>
   <div class="footer-bottom" data-i18n="footer_rights">
-    © 2025 Ygtybarly Ulag. Все права защищены. Часть группы Owadan Ülke.
+    © 2025 Ygtybarly Ulag. Все права защищены.
   </div>
 </footer>
 
@@ -639,15 +532,15 @@ const IMG_EXCAVATOR = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAAAAAAD/4QH4aH
 const T = {
   ru: {
     footer_tagline:'Профессиональная аренда транспорта и специализированной техники для бизнеса в Туркменистане.',
-    footer_rights:'© 2025 Ygtybarly Ulag. Все права защищены. Часть группы Owadan Ülke.'
+    footer_rights:'© 2025 Ygtybarly Ulag. Все права защищены.'
   },
   en: {
     footer_tagline:'Professional transport and specialized equipment rental for business in Turkmenistan.',
-    footer_rights:'© 2025 Ygtybarly Ulag. All rights reserved. Part of Owadan Ülke Group.'
+    footer_rights:'© 2025 Ygtybarly Ulag. All rights reserved.'
   },
   tm: {
     footer_tagline:'Türkmenistanda işewürlik üçin ulag we ýörite tehnikany kärendä bermek boýunça professional hyzmatlar.',
-    footer_rights:'© 2025 Ygtybarly Ulag. Ähli hukuklar goralýar. Owadan Ülke Toparynyň bir bölegi.'
+    footer_rights:'© 2025 Ygtybarly Ulag. Ähli hukuklar goralýar.'
   }
 };
 let currentLang = localStorage.getItem('yu_lang_v6') || 'ru';

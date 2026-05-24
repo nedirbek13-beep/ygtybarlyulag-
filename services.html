@@ -244,13 +244,22 @@ footer {
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
 }
 
-[data-l] { display: none; }
-html[data-current-lang="ru"] [data-l="ru"],
-html[data-current-lang="en"] [data-l="en"],
-html[data-current-lang="tm"] [data-l="tm"] { display: revert; }
+[data-l] { display: none !important; }
 html[data-current-lang="ru"] span[data-l="ru"],
 html[data-current-lang="en"] span[data-l="en"],
-html[data-current-lang="tm"] span[data-l="tm"] { display: inline; }
+html[data-current-lang="tm"] span[data-l="tm"] { display: inline !important; }
+html[data-current-lang="ru"] div[data-l="ru"],
+html[data-current-lang="en"] div[data-l="en"],
+html[data-current-lang="tm"] div[data-l="tm"] { display: flex !important; }
+html[data-current-lang="ru"] p[data-l="ru"],
+html[data-current-lang="en"] p[data-l="en"],
+html[data-current-lang="tm"] p[data-l="tm"] { display: block !important; }
+html[data-current-lang="ru"] ul[data-l="ru"],
+html[data-current-lang="en"] ul[data-l="en"],
+html[data-current-lang="tm"] ul[data-l="tm"] { display: block !important; }
+html[data-current-lang="ru"] li[data-l="ru"],
+html[data-current-lang="en"] li[data-l="en"],
+html[data-current-lang="tm"] li[data-l="tm"] { display: list-item !important; }
 
 .page-hero {
   padding: 140px 48px 80px;
@@ -584,7 +593,6 @@ html[data-current-lang="tm"] span[data-l="tm"] { display: inline; }
     <div class="footer-col">
       <h4><span data-l="ru">О компании</span><span data-l="en">About</span><span data-l="tm">Biz hakda</span></h4>
       <a href="about.html"><span data-l="ru">О нас</span><span data-l="en">About us</span><span data-l="tm">Biz hakda</span></a>
-      <a href="about.html#group">Owadan Ülke Group</a>
     </div>
     <div class="footer-col">
       <h4><span data-l="ru">Услуги</span><span data-l="en">Services</span><span data-l="tm">Hyzmatlar</span></h4>
@@ -599,7 +607,7 @@ html[data-current-lang="tm"] span[data-l="tm"] { display: inline; }
     </div>
   </div>
   <div class="footer-bottom" data-i18n="footer_rights">
-    © 2025 Ygtybarly Ulag. Все права защищены. Часть группы Owadan Ülke.
+    © 2025 Ygtybarly Ulag. Все права защищены.
   </div>
 </footer>
 
@@ -619,15 +627,15 @@ const IMG_EXCAVATOR = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAAAAAAD/4QH4aH
 const T = {
   ru: {
     footer_tagline:'Профессиональная аренда транспорта и специализированной техники для бизнеса в Туркменистане.',
-    footer_rights:'© 2025 Ygtybarly Ulag. Все права защищены. Часть группы Owadan Ülke.'
+    footer_rights:'© 2025 Ygtybarly Ulag. Все права защищены.'
   },
   en: {
     footer_tagline:'Professional transport and specialized equipment rental for business in Turkmenistan.',
-    footer_rights:'© 2025 Ygtybarly Ulag. All rights reserved. Part of Owadan Ülke Group.'
+    footer_rights:'© 2025 Ygtybarly Ulag. All rights reserved.'
   },
   tm: {
     footer_tagline:'Türkmenistanda işewürlik üçin ulag we ýörite tehnikany kärendä bermek boýunça professional hyzmatlar.',
-    footer_rights:'© 2025 Ygtybarly Ulag. Ähli hukuklar goralýar. Owadan Ülke Toparynyň bir bölegi.'
+    footer_rights:'© 2025 Ygtybarly Ulag. Ähli hukuklar goralýar.'
   }
 };
 let currentLang = localStorage.getItem('yu_lang_v6') || 'ru';
